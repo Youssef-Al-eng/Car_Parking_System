@@ -23,39 +23,45 @@ The system uses an **ultrasonic sensor** to measure distance, displays results o
 - Buzzer  
 
 ---
-
 ## 📟 Pin Connections
 
-### ATmega32
-| Port | Pin   | Connected To               |
-|------|-------|-----------------------------|
-| PA1  | LCD RS Pin                         |
-| PA2  | LCD E Pin                          |
-| PA3–PA6 | LCD D4–D7 (4-bit mode)          |
-| PC0  | Red LED                            |
-| PC1  | Green LED                          |
-| PC2  | Blue LED                           |
-| PC5  | Buzzer (via transistor)            |
-| PD6  | Ultrasonic Echo pin                |
-| PD7  | Ultrasonic Trigger pin             |
+### ATmega32 → Peripheral Mapping
+| Port | Pin   | Connected To                   |
+|------|-------|--------------------------------|
+| PA1  |       | LCD RS Pin                     |
+| PA2  |       | LCD Enable (E) Pin             |
+| PA3  |       | LCD D4                         |
+| PA4  |       | LCD D5                         |
+| PA5  |       | LCD D6                         |
+| PA6  |       | LCD D7                         |
+| PC0  |       | Red LED                        |
+| PC1  |       | Green LED                      |
+| PC2  |       | Blue LED                       |
+| PC5  |       | Buzzer (via transistor driver) |
+| PD6  |       | Ultrasonic Echo Pin            |
+| PD7  |       | Ultrasonic Trigger Pin         |
 
-### Ultrasonic Sensor
+### Ultrasonic Sensor (HC-SR04)
 - **Echo → PD6**  
 - **Trigger → PD7**
 
-### LCD Display
-- RS → PA1  
-- RW → GND  
-- E → PA2  
-- D4–D7 → PA3–PA6  
+### LCD Display (16x2 in 4-bit mode)
+- **RS → PA1**  
+- **RW → GND**  
+- **E → PA2**  
+- **D4 → PA3**  
+- **D5 → PA4**  
+- **D6 → PA5**  
+- **D7 → PA6**
 
 ### LEDs
-- Red → PC0  
-- Green → PC1  
-- Blue → PC2  
+- **Red LED → PC0**  
+- **Green LED → PC1**  
+- **Blue LED → PC2**
 
 ### Buzzer
-- PC5  
+- **PC5 (via transistor)**  
+
 
 ---
 
